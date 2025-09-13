@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 261 30% 9%;
+    --foreground: 0 0% 98%;
+    --card: 261 30% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 261 30% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 261 74% 68%;
+    --primary-foreground: 261 10% 9.8%;
+    --secondary: 261 20% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 261 20% 20%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 261 25% 35%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 261 20% 20%;
+    --input: 261 20% 22%;
+    --ring: 261 74% 68%;
+    --chart-1: 261 74% 68%;
+    --chart-2: 261 50% 78%;
+    --chart-3: 261 50% 60%;
+    --chart-4: 261 50% 90%;
+    --chart-5: 240 5% 64.9%;
+    --radius: 0.5rem;
+    --sidebar-background: 261 30% 9%;
+    --sidebar-foreground: 0 0% 95.9%;
+    --sidebar-primary: 261 74% 68%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 261 30% 15%;
+    --sidebar-accent-foreground: 0 0% 95.9%;
+    --sidebar-border: 261 30% 15%;
+    --sidebar-ring: 261 74% 68%;
+  }
+  .dark {
+    --background: 261 30% 9%;
+    --foreground: 0 0% 98%;
+    --card: 261 30% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 261 30% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 261 74% 68%;
+    --primary-foreground: 261 10% 9.8%;
+    --secondary: 261 20% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 261 20% 20%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 261 25% 35%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 261 20% 20%;
+    --input: 261 20% 22%;
+    --ring: 261 74% 68%;
+    --chart-1: 261 74% 68%;
+    --chart-2: 261, 65%, 75%;
+    --chart-3: 261, 55%, 65%;
+    --chart-4: 261, 45%, 55%;
+    --chart-5: 240 5% 64.9%;
+    --sidebar-background: 261 30% 9%;
+    --sidebar-foreground: 0 0% 95.9%;
+    --sidebar-primary: 261 74% 68%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 261 30% 15%;
+    --sidebar-accent-foreground: 0 0% 95.9%;
+    --sidebar-border: 261 30% 15%;
+    --sidebar-ring: 261 74% 68%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    background-color: #fff;
+  }
+  .print-area {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    color: #000;
+    padding: 1rem;
+  }
+  .print-area * {
+    color: #000 !important;
+    background-color: transparent !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

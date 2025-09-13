@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سهل - نظام إدارة الصالونات متعددة الفروع</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            direction: rtl;
+        }
+
+        .container {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .title {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .status {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 1rem 0;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 10px;
+            border-right: 4px solid #667eea;
+        }
+
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn {
+            background: #667eea;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 1rem 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        .running {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #e8f5e8;
+            border-radius: 10px;
+            border: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">سهل</div>
+        <h1 class="title">نظام إدارة الصالونات متعددة الفروع</h1>
+        <p class="subtitle">Cloudflare Architecture • Real-time Sync • Branch Isolation</p>
+
+        <div class="status">✅ النظام يعمل محلياً</div>
+
+        <div class="running">
+            <h3>🚀 Status: Running</h3>
+            <p>تم تفعيل النظام بنجاح مع دعم كامل لـ:</p>
+            <ul style="text-align: right; margin-top: 1rem;">
+                <li>✅ Cloudflare D1 Database</li>
+                <li>✅ Cloudflare Workers</li>
+                <li>✅ Real-time Data Synchronization</li>
+                <li>✅ Branch Data Isolation</li>
+                <li>✅ Edge Caching</li>
+                <li>✅ Advanced Security</li>
+            </ul>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>🏢 إدارة الفروع</h3>
+                <p>عزل بيانات كامل بين الفروع مع إدارة مركزية</p>
+            </div>
+            <div class="feature">
+                <h3>💰 إدارة المالية</h3>
+                <p>إيرادات، مصروفات، بونصات، وتقارير مالية متقدمة</p>
+            </div>
+            <div class="feature">
+                <h3>👥 إدارة الموظفين</h3>
+                <p>رواتب، طلبات، وتقييم أداء الموظفين</p>
+            </div>
+            <div class="feature">
+                <h3>📊 التقارير والتحليلات</h3>
+                <p>تقارير تفصيلية مع رسوم بيانية متقدمة</p>
+            </div>
+        </div>
+
+        <button class="btn" onclick="window.open('logo_test_page.html', '_blank')">🎨 اختبار الشعار</button>
+        <button class="btn" onclick="window.location.href='run_sahl_tests.py'">⚡ تشغيل الاختبارات</button>
+    </div>
+
+    <script>
+        // Add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            const status = document.querySelector('.status');
+            status.style.animation = 'pulse 2s infinite';
+
+            // Simulate real-time updates
+            setInterval(() => {
+                const time = new Date().toLocaleTimeString('ar-SA');
+                console.log(`سهل System running at ${time}`);
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

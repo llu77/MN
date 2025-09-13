@@ -1,0 +1,60 @@
+
+/* سهل Logo Styles */
+.logo {
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.logo-header {
+  margin: 0 auto;
+  display: block;
+}
+
+.logo-sidebar {
+  margin-bottom: 2rem;
+}
+
+.logo-footer {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.logo-footer:hover {
+  opacity: 1;
+}
+
+.logo-mobile {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo-print {
+  filter: grayscale(100%);
+}
+
+/* Responsive Logo Styles */
+@media (max-width: 768px) {
+  .logo-header {
+    width: 140px !important;
+    height: 42px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-header {
+    width: 120px !important;
+    height: 36px !important;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] .logo-with-text {
+  flex-direction: row-reverse;
+}

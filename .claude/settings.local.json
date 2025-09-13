@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(python -m pytest:*)",
+      "Bash(pip install:*)",
+      "WebFetch(domain:drive.google.com)",
+      "Bash(playwright install:*)",
+      "Bash(curl:*)",
+      "Bash(python:*)",
+      "Bash(chcp:*)",
+      "Bash(echo:*)",
+      "Bash(start:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
